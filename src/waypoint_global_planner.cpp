@@ -60,7 +60,7 @@ void WaypointGlobalPlanner::initialize(std::string name, costmap_2d::Costmap2DRO
 bool WaypointGlobalPlanner::makePlan(const geometry_msgs::PoseStamped& start_pose,
   const geometry_msgs::PoseStamped& goal, std::vector<geometry_msgs::PoseStamped>& plan)
 {
-  path_.poses.insert(path_.poses.begin(), start_pose);
+  //path_.poses.insert(path_.poses.begin(), start_pose);
   interpolatePath(path_);
   plan_pub_.publish(path_);
   plan = path_.poses;
